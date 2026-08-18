@@ -170,7 +170,7 @@ ignore-var-parameters = true  # ignore missing documentation for *args and **kwa
 omit = ["tests/*"]
 
 [tool.pytest.ini_options]
-addopts = "--strict-markers --strict-config --durations=5 --snapshot-warn-unused -vv"
+addopts = "--strict-markers --strict-config --durations=5 --snapshot-warn-unused -vv --disable-socket --allow-unix-socket"
 markers = [
     "requires: mark tests as requiring a specific library",
     "scheduled: mark tests to run in scheduled testing",
