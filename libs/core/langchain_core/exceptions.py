@@ -84,6 +84,14 @@ class ErrorCode(Enum):
     MODEL_RATE_LIMIT = "MODEL_RATE_LIMIT"  # Used in JS; not Py (yet)
     OUTPUT_PARSING_FAILURE = "OUTPUT_PARSING_FAILURE"
 
+    # Agent error codes
+    AGENT_ERROR = "AGENT_ERROR"
+    AGENT_MIDDLEWARE_ERROR = "AGENT_MIDDLEWARE_ERROR"
+    AGENT_TOOL_EXECUTION_ERROR = "AGENT_TOOL_EXECUTION_ERROR"
+    AGENT_MODEL_CALL_ERROR = "AGENT_MODEL_CALL_ERROR"
+    AGENT_CONFIGURATION_ERROR = "AGENT_CONFIGURATION_ERROR"
+    AGENT_GRAPH_EXECUTION_ERROR = "AGENT_GRAPH_EXECUTION_ERROR"
+
 
 def create_message(*, message: str, error_code: ErrorCode) -> str:
     """Create a message with a link to the LangChain troubleshooting guide.
